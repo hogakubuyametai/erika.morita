@@ -1,0 +1,67 @@
+ /* profile */
+
+ h2 {
+  margin-top: 1rem;
+}
+
+h3 {
+  /* font-size: 3vw; */
+}
+
+p {
+  /* font-size: 2.8vw; */
+}
+
+.profile {
+  margin-top: 3rem;
+}
+
+.img-container {
+  text-align: center;
+}
+
+.profile img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+.profile a {
+  transition: .2s;
+}
+
+.profile a:hover {
+  opacity: 0.7;
+}
+
+.detail {
+  text-align: left;
+  margin-top: 16px;
+}
+
+ul {
+  margin-top: 0.5rem;
+}
+
+/* large screen */
+
+@media (min-width: 768px) {  
+  .profile img {
+    z-index: 1;
+  } 
+
+  h3 {
+    /* font-size: min(2.25vw, 24px); */
+  }
+
+  p {
+    /* font-size: min(2vw, 21.5px); */
+  }
+
+  .profile {
+    display: flex;
+    gap: 1em;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
