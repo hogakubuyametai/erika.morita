@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body {
@@ -11,7 +12,6 @@ body {
   font-weight: 400;
   font-style: normal;
   margin-bottom: 16px;
-  overflow-x: hidden;
 }
 
 ul {
@@ -29,9 +29,8 @@ a {
 
 .container {
   margin: 0 auto;
-  width: calc(100vw - 32px);
+  width: calc(100% - 32px);
   height: 100%;
-  overflow-x: hidden;
 }
 
 h2 {
