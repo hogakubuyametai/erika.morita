@@ -1,0 +1,335 @@
+/* common */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "effra-cc", "source-han-sans-japanese", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 16px;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  margin: 0 auto;
+  width: calc(100% - 32px);
+  height: 100%;
+}
+
+h2 {
+  font-weight: normal;
+  color: #333;
+}
+
+h3 {
+  font-weight: normal;
+  color: #333;
+}
+
+p {
+  color: #333;
+}
+
+/* header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+header img {
+  cursor: pointer;
+  transition: .2s;
+  /* background-color: PINK; */
+  }
+
+  header img:hover {
+    opacity: 0.7;
+  }
+
+  .logo-pc {
+    display: none;
+    /* background-color: aliceblue; */
+  }
+
+  .logo-sp {
+    margin-top: 16px;
+    /* background-color: aliceblue; */
+  }
+
+  nav {
+    /* background-color: pink; */
+    height: 67px;
+    display: flex;
+  } 
+
+  .nav-sp {
+    position: fixed;
+    right: 0;
+    height: calc(100% - 95px);
+    width: 35%;
+    top: 95px;
+    background-color: #ffffff;
+    transform: translateX(100%);
+    transition: all 0.5s ease-in-out;
+    z-index: 2;
+    opacity: 0.95;
+  }
+
+  .nav-active {
+    transform: translateX(0%) !important;
+    z-index: 2;
+  }
+
+  .nav-pc {
+    display: none;
+  }
+
+  nav .nav-sp {
+    display: flex;
+    /* background-color: yellow; */
+    height: 100%;
+    /* justify-content: space-around; */
+    flex-direction: column;
+  }
+
+  nav .nav-sp li {
+    margin: 8% 0 8% 12%;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    font-size: 1.5rem;
+  }
+
+  @keyframes navLinksFade {
+    0% {
+      opacity: 0;
+      transform: translateX(80%);
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+nav .nav-sp li a {
+  color: #333;
+  transition: .2s;
+}
+
+nav .nav-sp li.current a {
+  color: rgb(170, 170, 170);
+}
+
+nav .nav-sp li a:hover {
+  opacity: 0.6;
+}
+
+.burger {
+  margin-top: 32px;
+  cursor: pointer;
+  transition: .2s;
+  overflow-x: visible;
+}
+
+.burger div {
+  width: 25px;
+  height: 1px;
+  background-color: #333;
+  margin: 5px;
+  transition: all .4s ease-in-out;
+}
+
+.burger:hover {
+  opacity: 0.5;
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, -6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-14px, -4px);
+}
+
+/* hero */
+
+.hero {
+  text-align: center;
+}
+
+.hero img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* footer */
+.ft{
+position: relative;
+padding-top: 160px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  text-align: right;
+  z-index: 1;
+}
+
+ .media-icons a {
+  font-size: 24px;
+  margin-left: 30px;
+  color: #5d5d5d;
+  cursor: pointer;
+ }
+
+ .media-icons a:hover {
+  opacity: 0.7;
+  transition: .2s;
+ }
+
+ /* スマホで閲覧した際に表示されるオブジェクトを除去するため */
+ .fa-brands {
+  display: inline !important;
+ }
+
+ small {
+  color: #333;
+ }
+
+/* back-to-top */
+
+.back-to-top {
+  margin-top: 8rem;
+  overflow-x: visible;
+}
+
+.back-to-top a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+   width: 90vw; 
+  padding: 16px 20px;
+  text-align: right;
+  transform: rotate(90deg);
+  transform-origin: bottom right;
+  transition: .2s;
+}
+
+.back-to-top a:hover {
+  opacity: 0.7;
+}
+
+.arrow1 {
+width: 48px;
+height: 1px;
+background: #333;
+position: absolute;
+top: 50%;
+right: 62px;
+}
+
+.arrow2 {
+width: 1px;
+height: 12px;
+background: #333;
+position: absolute;
+top: calc(50% + 1px);
+right: 109px;
+transform: rotate(-130deg);
+transform-origin: top left;
+}
+
+ /* large screen */
+
+ @media (min-width: 768px) {
+  header {
+    justify-content: space-between;
+  }
+
+  .logo-pc {
+    display: inline;
+  }
+
+  .logo-sp {
+    display: none;
+  }
+
+  .nav-pc {
+    display: inline;
+  }
+
+  nav {
+    /* background-color: pink; */
+    height: 67px;
+    display: flex;
+  } 
+
+  nav .nav-pc {
+    display: flex;
+    /* background-color: yellow; */
+    height: 100%;
+    /* justify-content: space-around; */
+  }
+
+  nav .nav-pc li {
+    margin: 8px;
+    display: flex;
+    align-items: center;
+  }
+
+nav .nav-pc li a {
+  color: #333;
+  transition: .2s;
+}
+
+nav .nav-pc li.current a {
+  color: rgb(170, 170, 170);
+}
+
+nav .nav-pc li a:hover {
+  opacity: 0.6;
+}
+
+.nav-sp {
+  display: none;
+}
+
+.for-nav-none {
+  display: none;
+}
+
+.nav-active {
+  display: none;
+}
+
+.burger {
+    display: none;
+  }
+
+  .back-to-top a {
+    width: 95vw;
+  }
+}
