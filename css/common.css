@@ -332,7 +332,7 @@ nav .nav-pc li a:hover {
     display: none;
   }
 
-  /* .back-to-top a {
-    width: 95vw;
-  } */
+  .back-to-top a {
+    width: 15vw;
+  }
 }
