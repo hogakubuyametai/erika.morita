@@ -202,12 +202,16 @@ footer {
   margin-left: 30px;
   color: #5d5d5d;
   cursor: pointer;
-
  }
 
  .media-icons a:hover {
   opacity: 0.7;
   transition: .2s;
+ }
+
+ /* スマホで閲覧した際に表示されるオブジェクトを除去するため */
+ .fa-brands {
+  display: inline !important;
  }
 
  small {
