@@ -224,18 +224,21 @@ footer {
 .back-to-top {
   margin-top: 8rem;
   overflow-x: visible;
+  position: relative;
 }
 
 .back-to-top a {
   color: #333;
   text-decoration: none;
   display: block;
-   width: 90vw; 
+  width: 30vw; 
   padding: 16px 20px;
   text-align: right;
   transform: rotate(90deg);
   transform-origin: bottom right;
   transition: .2s;
+  position: absolute;
+  right: 55px;
 }
 
 .back-to-top a:hover {
