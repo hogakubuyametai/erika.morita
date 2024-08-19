@@ -218,7 +218,7 @@ footer {
 
 .back-to-top {
   margin-top: 8rem;
-  
+  overflow-x: visible;
 }
 
 .back-to-top a {
